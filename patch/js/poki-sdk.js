@@ -145,7 +145,7 @@ PokiSDK= function() {
   this.commercialBreak= function(){
     consoleLog("--fx--PokiSDK--commercialBreak--");
     return new Promise((resolve, reject)=> {
-      loadJS("https://www.ubg235.com/ads/commercial.js", resolve);  
+      loadJS("https://www.ubg235.com/ads/rewarded.js", resolve);  
     });
   }
 
