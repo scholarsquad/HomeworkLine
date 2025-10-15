@@ -75,8 +75,6 @@ PokiSDK= function() {
     scriptEle.setAttribute("src", FILE_URL);
     scriptEle.setAttribute("type", "text/javascript");
     scriptEle.setAttribute("async", true);
-  
-    document.body.appendChild(scriptEle);
     
     // Success
     scriptEle.addEventListener("load", () => {
