@@ -70,24 +70,22 @@ xwindow = new Proxy(window, {
 PokiSDK= function() {
   // ***** UTILS *****
   function loadJS(FILE_URL, callback) {
-    consoleLog("--fx--PokiSDK--loadJS Done--");
-    callback(true);
-    //let scriptEle = document.createElement("script");
+    let scriptEle = document.createElement("script");
   
-    //scriptEle.setAttribute("src", FILE_URL);
-    //scriptEle.setAttribute("async", true);
+    scriptEle.setAttribute("src", FILE_URL);
+    scriptEle.setAttribute("async", true);
     
     // Success
-   // scriptEle.addEventListener("load", () => {
-      //consoleLog("--fx--PokiSDK--loadJS Done--");
-      //callback(true);
-   // });
+   scriptEle.addEventListener("load", () => {
+      consoleLog("--fx--PokiSDK--loadJS Done--");
+      callback(true);
+    });
     
      // Error
-    //scriptEle.addEventListener("error", () => {
-     // consoleLog("--fx--PokiSDK--loadJS Error--");
-      //callback(false);
-    //});
+    scriptEle.addEventListener("error", () => {
+      consoleLog("--fx--PokiSDK--loadJS Error--");
+      callback(false);
+    });
   }
 
   this.getURLParam= function(name) {
